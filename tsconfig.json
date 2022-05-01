@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "outDir": "dist",
+    "baseUrl": ".",
+    "paths": {
+      "*": [
+        "*.d.ts"
+      ]
+    },
+    "resolveJsonModule": true,
+    "target": "esnext",
+    "module": "commonjs"
+  },
+  "extends": "eslint-config-wesbos/tsconfig.json",
+  "include": [
+    "**/*"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
