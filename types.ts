@@ -12,4 +12,23 @@ interface MyEvent {
   execute: (...any: any) => void;
 }
 
-export { MyCommand, MyEvent };
+interface HAEntities {
+  entity_id: string;
+  state: string;
+  attributes: Record<string, string | number | string[]>;
+  last_changed: string;
+  last_updated: string;
+  context: {
+    id: string;
+    parent_id: string | null;
+    user_id: string | null;
+  };
+}
+
+interface MyStates {
+  entity: string;
+  entityStatus: string;
+  name: string;
+}
+
+export { MyCommand, MyEvent, HAEntities, MyStates };

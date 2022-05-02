@@ -11,7 +11,6 @@
     "target": "esnext",
     "module": "commonjs"
   },
-  "extends": "eslint-config-wesbos/tsconfig.json",
   "include": [
     "**/*"
   ],
