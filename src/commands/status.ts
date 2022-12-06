@@ -8,6 +8,7 @@ const status: DiscordCommand = {
   data: new SlashCommandBuilder()
     .setName('status')
     .setDescription('Gives a quick overview of the house state'),
+
   execute: async (interaction: CommandInteraction) => {
     await interaction.deferReply();
 
@@ -61,4 +62,4 @@ const status: DiscordCommand = {
   },
 };
 
-export { status };
+export default status;

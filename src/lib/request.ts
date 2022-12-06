@@ -15,9 +15,15 @@ const request: DiscordRequest = {
       body: JSON.stringify(data), // body data type must match "Content-Type" header
     });
     console.log(`Response ${response.status} ${response.statusText}`);
+    if (response.status > 201) {
+      console.error('ERROR: Problem talking to endpoint. Response was');
+      console.log(response.body);
+      return null;
+    }
 
     return response.json(); // parses JSON response into native JavaScript objects
   },
+
   get: async ({ url = '', token = '' }) => {
     console.log(`Calling ${url}`);
     const response = await fetch(url, {
